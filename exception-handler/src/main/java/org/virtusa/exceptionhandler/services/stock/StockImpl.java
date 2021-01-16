@@ -19,16 +19,16 @@ public class StockImpl implements Stock{
         return availableStocks;
     }
 
-    public void reduceStocks(int amount) throws QuantityException, StockDBException {
-        if (amount > availableStocks)
+    public void reduceStocks(int stockCount) throws QuantityException, StockDBException {
+        if (stockCount > availableStocks)
             throw new QuantityException("There are not enough stocks!");
-        availableStocks = availableStocks - amount;
+        availableStocks = availableStocks - stockCount;
         writeFile(availableStocks);
 
     }
 
-    public void addNewStock(int newStock) throws StockDBException {
-        availableStocks = availableStocks +newStock;
+    public void addNewStock(int newStockCount) throws StockDBException {
+        availableStocks = availableStocks +newStockCount;
         writeFile(availableStocks);
     }
 

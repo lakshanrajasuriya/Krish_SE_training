@@ -9,18 +9,18 @@ import java.util.Scanner;
 
 public class CommandService {
     Scanner scanner;
-    public void listen() {
+    public void listen()  {
         scanner= new Scanner(System.in);
         while (true){
-            System.out.println("What do you want? ");
-            System.out.println("A - Reduce,  B - Add, Q - Quit");
+            System.out.println("Select an option:");
+            System.out.println("A - Get Stock,  B - Add Stock, Q - Exit");
             Scanner scanner=new Scanner(System.in);
-            String choice=scanner.nextLine();
-            if(choice.equalsIgnoreCase("a"))
-            loopReduce();
-            else if(choice.equalsIgnoreCase("b"))
-                loopAdd();
-            else if(choice.equalsIgnoreCase("q"))
+            String selectedOption=scanner.nextLine();
+            if(selectedOption.equalsIgnoreCase("a"))
+                getStock();
+            else if(selectedOption.equalsIgnoreCase("b"))
+                addStock();
+            else if(selectedOption.equalsIgnoreCase("q"))
                 System.exit(0);
             else
                 System.out.println("Invalid Command");
@@ -28,27 +28,28 @@ public class CommandService {
         }
     }
 
-    private void loopReduce()  {
-        System.out.println("Enter Stock amount need: ");
-        int need=scanner.nextInt();
+    private void getStock()  {
+        System.out.println("Enter the stock amount you need: ");
+        int stockCount=scanner.nextInt();
         try {
             Stock stock=new StockImpl();
-            stock.reduceStocks(need);
+            stock.reduceStocks(stockCount);
             System.out.println("Available Stock:"+stock.getAvailableStocks());
         } catch (QuantityException e) {
             System.out.println("Error: "+e.getMessage());
-            e.printStackTrace();
+//            e.printStackTrace();
         } catch (StockDBException e) {
             System.out.println("Error: "+e.getMessage());
+//            e.printStackTrace();
         }
     }
 
-    private void loopAdd()  {
-        System.out.println("Enter Stock amount to add: ");
-        int need=scanner.nextInt();
+    private void addStock()  {
+        System.out.println("Enter the Stock amount to add: ");
+        int stockCount=scanner.nextInt();
         try {
             Stock stock=new StockImpl();
-            stock.addNewStock(need);
+            stock.addNewStock(stockCount);
             System.out.println("Available Stock:"+stock.getAvailableStocks());
         } catch (StockDBException e) {
 //            e.printStackTrace();
