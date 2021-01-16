@@ -7,6 +7,8 @@ public class Application {
         ConnectionSettings connectionSettings=ConnectionSettings.getConnectionSettings();
         System.out.println(connectionSettings);
 
+
+        connectionSettings.setUrl("http://localhost:8000");
         connectionSettings.setUserName("lakshan");
         connectionSettings.setPassword("123");
         System.out.println(connectionSettings);
