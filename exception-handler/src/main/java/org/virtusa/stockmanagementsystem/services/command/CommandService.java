@@ -16,7 +16,7 @@ public class CommandService {
         String itemType = scanner.nextLine();
 
         System.out.println("Item length: ");
-        int itemLength = scanner.nextInt();
+        int itemLength = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Item color: ");
         String itemColor = scanner.nextLine();

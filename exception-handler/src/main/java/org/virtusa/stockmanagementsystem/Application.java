@@ -3,7 +3,6 @@ package org.virtusa.stockmanagementsystem;
 import org.virtusa.stockmanagementsystem.services.command.CommandService;
 import org.virtusa.stockmanagementsystem.services.exceptions.AddItemException;
 import org.virtusa.stockmanagementsystem.services.exceptions.DBNotFoundException;
-import org.virtusa.stockmanagementsystem.services.exceptions.QuantityExceedException;
 import org.virtusa.stockmanagementsystem.services.exceptions.RemoveItemException;
 
 import java.util.Scanner;
@@ -35,13 +34,11 @@ public class Application {
 
             }
         } catch (DBNotFoundException e) {
-            e.printStackTrace();
+            System.out.println(e);
         } catch (AddItemException e) {
             e.printStackTrace();
-        } catch (QuantityExceedException e) {
-            e.printStackTrace();
         } catch (RemoveItemException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 }
