@@ -1,10 +1,10 @@
-package org.virtusa.exceptionhandler.services.commands;
+package org.virtusa.exceptionhandler.services.command;
 
-import org.virtusa.exceptionhandler.services.commands.exceptions.CommandException;
+import org.virtusa.exceptionhandler.services.exceptions.CommandException;
 import org.virtusa.exceptionhandler.services.stock.Stock;
 import org.virtusa.exceptionhandler.services.stock.StockImpl;
-import org.virtusa.exceptionhandler.services.stock.exceptions.QuantityException;
-import org.virtusa.exceptionhandler.services.stock.exceptions.StockDBException;
+import org.virtusa.exceptionhandler.services.exceptions.QuantityException;
+import org.virtusa.exceptionhandler.services.exceptions.StockDBException;
 import org.virtusa.exceptionhandler.services.variant.Variant;
 
 import java.util.Scanner;

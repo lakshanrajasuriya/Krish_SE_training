@@ -1,7 +1,7 @@
 package org.virtusa.exceptionhandler.services.stock;
 
-import org.virtusa.exceptionhandler.services.stock.exceptions.QuantityException;
-import org.virtusa.exceptionhandler.services.stock.exceptions.StockDBException;
+import org.virtusa.exceptionhandler.services.exceptions.QuantityException;
+import org.virtusa.exceptionhandler.services.exceptions.StockDBException;
 
 import java.io.File;
 import java.io.FileNotFoundException;

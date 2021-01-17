@@ -1,7 +1,7 @@
 package org.virtusa.exceptionhandler.services.variant;
 
 import org.virtusa.exceptionhandler.services.item.Item;
-import org.virtusa.exceptionhandler.services.item.ItemException;
+import org.virtusa.exceptionhandler.services.exceptions.ItemException;
 
 public class Variant {
     private String type;

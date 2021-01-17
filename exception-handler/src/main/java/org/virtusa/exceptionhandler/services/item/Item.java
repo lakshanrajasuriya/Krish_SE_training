@@ -2,7 +2,7 @@ package org.virtusa.exceptionhandler.services.item;
 
 import org.virtusa.exceptionhandler.services.stock.Stock;
 import org.virtusa.exceptionhandler.services.stock.StockImpl;
-import org.virtusa.exceptionhandler.services.variant.VarientException;
+import org.virtusa.exceptionhandler.services.exceptions.VarientException;
 
 public class Item {
     private int id;

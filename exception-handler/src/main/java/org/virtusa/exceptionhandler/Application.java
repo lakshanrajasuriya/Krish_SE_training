@@ -1,7 +1,7 @@
 package org.virtusa.exceptionhandler;
 
-import org.virtusa.exceptionhandler.services.commands.CommandService;
-import org.virtusa.exceptionhandler.services.commands.exceptions.CommandException;
+import org.virtusa.exceptionhandler.services.command.CommandService;
+import org.virtusa.exceptionhandler.services.exceptions.CommandException;
 
 public class Application {
     public static void main(String[] args) {

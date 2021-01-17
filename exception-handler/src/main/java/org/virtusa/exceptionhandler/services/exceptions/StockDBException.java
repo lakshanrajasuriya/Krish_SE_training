@@ -1,4 +1,4 @@
-package org.virtusa.exceptionhandler.services.stock.exceptions;
+package org.virtusa.exceptionhandler.services.exceptions;
 
 public class StockDBException extends Exception {
     public StockDBException(String message, Exception exception) {

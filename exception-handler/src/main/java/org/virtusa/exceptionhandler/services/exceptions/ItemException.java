@@ -1,4 +1,4 @@
-package org.virtusa.exceptionhandler.services.item;
+package org.virtusa.exceptionhandler.services.exceptions;
 
 public class ItemException extends Exception {
     public ItemException(String message, Exception exception) {

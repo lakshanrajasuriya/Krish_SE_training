@@ -1,4 +1,4 @@
-package org.virtusa.exceptionhandler.services.commands.exceptions;
+package org.virtusa.exceptionhandler.services.exceptions;
 
 public class CommandException extends Exception {
     public CommandException(String message, Exception exception) {

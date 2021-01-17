@@ -1,4 +1,4 @@
-package org.virtusa.exceptionhandler.services.stock.exceptions;
+package org.virtusa.exceptionhandler.services.exceptions;
 
 public class QuantityException extends RuntimeException {
     public QuantityException(String message, Exception exception) {
