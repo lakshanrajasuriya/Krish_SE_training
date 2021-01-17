@@ -1,7 +1,7 @@
-package org.virtusa.exceptionhandler.services.stock;
+package org.virtusa.stockmanagementsystem.services.stock;
 
-import org.virtusa.exceptionhandler.services.exceptions.QuantityException;
-import org.virtusa.exceptionhandler.services.exceptions.StockDBException;
+import org.virtusa.stockmanagementsystem.services.exceptions.QuantityExceedException;
+import org.virtusa.stockmanagementsystem.services.exceptions.DBNotFoundException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,11 +10,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class StockImpl implements Stock {
-    //    private
     int availableStocks;
 
 
-    public StockImpl() throws StockDBException {
+    public StockImpl() throws DBNotFoundException {
         readFile();
     }
 
@@ -22,20 +21,20 @@ public class StockImpl implements Stock {
         return availableStocks;
     }
 
-    public void reduceStocks(int stockCount) throws QuantityException, StockDBException {
+    public void reduceStocks(int stockCount) throws DBNotFoundException {
         if (stockCount > availableStocks)
-            throw new QuantityException("Error: Not enough stocks!", null);
+            throw new QuantityExceedException("Error: Not enough stocks!", null);
         availableStocks = availableStocks - stockCount;
         writeFile(availableStocks);
 
     }
 
-    public void addNewItem(int newStockCount) throws StockDBException {
+    public void addNewItem(int newStockCount) throws DBNotFoundException {
         availableStocks = availableStocks + newStockCount;
         writeFile(availableStocks);
     }
 
-    private void readFile() throws StockDBException {
+    private void readFile() throws DBNotFoundException {
         File file = new File("stock.txt");
         try {
             Scanner scanner = new Scanner(file);
@@ -44,18 +43,17 @@ public class StockImpl implements Stock {
             }
             scanner.close();
         } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-            throw new StockDBException("Error: Stock file not found", e);
+            throw new DBNotFoundException("Error: Stock file not found", e);
         }
     }
 
-    private void writeFile(int newStock) throws StockDBException {
+    private void writeFile(int newStock) throws DBNotFoundException {
         try {
             FileWriter fileWriter = new FileWriter("stock.txt");
             fileWriter.write(newStock + "");
             fileWriter.close();
         } catch (IOException ioException) {
-            throw new StockDBException("Error: Stock file not found", ioException);
+            throw new DBNotFoundException("Error: Stock file not found", ioException);
         }
     }
 }
