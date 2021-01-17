@@ -17,21 +17,26 @@ public class Application {
             while (true) {
                 System.out.println("Select an option:");
                 System.out.println("A - Get Available Stock count, B - Add New Item,  C - Remove an Item, D - Modify Item, Q - Exit");
-
                 String selectedOption = scanner.nextLine();
-                if (selectedOption.equalsIgnoreCase("a"))
-                    commandService.getStockCount();
-                else if (selectedOption.equalsIgnoreCase("b"))
-                    commandService.addItem();
-                else if (selectedOption.equalsIgnoreCase("c"))
-                    commandService.removeItem();
-                else if (selectedOption.equalsIgnoreCase("d"))
-                    commandService.modifyItem();
-                else if (selectedOption.equalsIgnoreCase("q"))
-                    System.exit(0);
-                else
-                    System.out.println("Invalid Command");
-
+                switch (selectedOption.toLowerCase()) {
+                    case "a":
+                        commandService.getStockCount();
+                        break;
+                    case "b":
+                        commandService.addItem();
+                        break;
+                    case "c":
+                        commandService.removeItem();
+                        break;
+                    case "d":
+                        commandService.modifyItem();
+                        break;
+                    case "q":
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Invalid Command");
+                }
             }
         } catch (DBNotFoundException e) {
             System.out.println(e);
