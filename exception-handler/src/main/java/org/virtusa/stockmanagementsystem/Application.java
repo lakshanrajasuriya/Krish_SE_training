@@ -16,7 +16,7 @@ public class Application {
         try {
             while (true) {
                 System.out.println("Select an option:");
-                System.out.println("A - Get Available Stock count, B - Add New Item,  C - Remove an Item, D - Modify Item, Q - Exit");
+                System.out.println("A - Get available stock count, B - Add a new item,  C - Remove an item, D - Modify items, Q - Exit");
                 String selectedOption = scanner.nextLine();
                 switch (selectedOption.toLowerCase()) {
                     case "a":

@@ -16,7 +16,8 @@ public class CommandService {
         String itemType = scanner.nextLine();
 
         System.out.println("Item length: ");
-        int itemLength = Integer.parseInt(scanner.nextLine());
+        int itemLength=scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Item color: ");
         String itemColor = scanner.nextLine();
@@ -26,8 +27,8 @@ public class CommandService {
             variant.setVariant();
             System.out.println("Item added!");
 
-        } catch (SetVarientException e) {
-            throw new AddItemException("Error: Failed to add new item", e);
+        } catch (SetVariantException e) {
+            throw new AddItemException("Error: Failed to create new item", e);
         }
     }
 
@@ -61,7 +62,8 @@ public class CommandService {
         String itemType = scanner.nextLine();
 
         System.out.println("Item length: ");
-        int itemLength = Integer.parseInt(scanner.nextLine());
+        int itemLength = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Item color: ");
         String itemColor = scanner.nextLine();

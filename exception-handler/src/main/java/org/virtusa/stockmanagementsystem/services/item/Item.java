@@ -14,7 +14,7 @@ public class Item {
             Stock stock = new StockImpl();
             stock.addNewItem(1);
         } catch (DBNotFoundException exception) {
-            throw new AddStockException("Error: Cannot add item to stock", exception);
+            throw new AddStockException("Error: Failed to add item to the Stock", exception);
         }
     }
 

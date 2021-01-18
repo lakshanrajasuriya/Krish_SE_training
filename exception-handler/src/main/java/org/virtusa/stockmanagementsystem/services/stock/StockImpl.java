@@ -23,7 +23,7 @@ public class StockImpl implements Stock {
 
     public void reduceStocks(int stockCount) throws DBNotFoundException {
         if (stockCount > availableStocks)
-            throw new QuantityExceedException("Error: Not enough stocks!", null);
+            throw new QuantityExceedException("Error: Not enough stocks!");
         availableStocks = availableStocks - stockCount;
         writeFile(availableStocks);
 
