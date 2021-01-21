@@ -18,10 +18,10 @@ public class Application {
 
 
         Book book = (Book) itemRegistry.getItem(ItemType.BOOK);
-        System.out.println("New Item" + book);
+        System.out.println("New Item: " + book);
         book.setNumberOfPages(120);
-        System.out.println("Updated Item" + book);
+        System.out.println("Updated Item: " + book);
         Book book2 = (Book) itemRegistry.getItem(ItemType.BOOK);
-        System.out.println("New Item" + book2);
+        System.out.println("New Item: " + book2);
     }
 }
