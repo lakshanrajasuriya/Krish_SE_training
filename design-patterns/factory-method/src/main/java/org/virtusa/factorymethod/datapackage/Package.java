@@ -1,4 +1,6 @@
-package org.virtusa.designpattern.factorymethod;
+package org.virtusa.factorymethod.datapackage;
+
+import org.virtusa.factorymethod.service.Service;
 
 import java.util.ArrayList;
 import java.util.List;

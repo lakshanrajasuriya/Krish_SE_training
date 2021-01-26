@@ -1,4 +1,4 @@
-package org.virtusa.designpattern.factorymethod;
+package org.virtusa.factorymethod.datapackage;
 
 public class PackageFactory {
     public static Package createPackage(PackageCode packageCode) {

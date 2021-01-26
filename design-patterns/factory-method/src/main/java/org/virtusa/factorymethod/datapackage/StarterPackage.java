@@ -1,4 +1,6 @@
-package org.virtusa.designpattern.factorymethod;
+package org.virtusa.factorymethod.datapackage;
+
+import org.virtusa.factorymethod.service.AnytimeData;
 
 public class StarterPackage extends Package {
     public void createPackage() {

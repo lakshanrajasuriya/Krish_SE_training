@@ -1,4 +1,4 @@
-package org.virtusa.designpattern.factorymethod;
+package org.virtusa.factorymethod.service;
 
 public class EmailService extends Service {
     @Override
