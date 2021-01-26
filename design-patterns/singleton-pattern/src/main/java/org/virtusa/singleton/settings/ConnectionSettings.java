@@ -1,4 +1,4 @@
-package org.virtusa.designpattern.singleton.settings;
+package org.virtusa.singleton.settings;
 
 public class ConnectionSettings {
     private static volatile ConnectionSettings connectionSettings;
