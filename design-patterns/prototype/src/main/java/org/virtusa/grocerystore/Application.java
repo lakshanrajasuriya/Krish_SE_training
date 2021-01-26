@@ -1,5 +1,7 @@
 package org.virtusa.grocerystore;
 
+import org.virtusa.grocerystore.item.*;
+
 public class Application {
     public static void main(String[] args) {
         ItemRegistry itemRegistry = new ItemRegistry();

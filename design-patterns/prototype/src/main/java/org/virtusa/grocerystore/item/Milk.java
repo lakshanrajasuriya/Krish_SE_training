@@ -1,4 +1,4 @@
-package org.virtusa.grocerystore;
+package org.virtusa.grocerystore.item;
 
 public class Milk extends Item {
     private String brand;
