@@ -1,0 +1,5 @@
+service:
+  datasource:
+    url: jdbc:mysql://localhost:3306/service1DB
+    username: admin
+    password: pass123

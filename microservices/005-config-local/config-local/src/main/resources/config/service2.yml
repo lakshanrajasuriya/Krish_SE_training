@@ -1,0 +1,5 @@
+service:
+  datasource:
+    url: jdbc:mysql://localhost:3306/service2DB
+    username: root
+    password: rootadmin123
