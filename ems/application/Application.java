@@ -1,9 +1,6 @@
-//package EMS.Application;
+import employee.*;
+import manager.*;
 
-//import EMS.Application.*;
-//import EMS.Employee.*;
-
-//import .*;
 class Application{
 public static void main(String [] args){
 Employee e1=new Employee();
