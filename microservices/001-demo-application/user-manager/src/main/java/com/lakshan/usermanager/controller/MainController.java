@@ -1,4 +1,4 @@
-package com.lakshan.demoapplication.controller;
+package com.lakshan.usermanager.controller;
 
 import org.springframework.web.bind.annotation.*;
 
