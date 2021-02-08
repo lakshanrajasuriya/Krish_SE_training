@@ -1,5 +1,6 @@
 package com.lakshan.bookingengine.authserver.conf;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,11 +20,14 @@ public class AuthServerConfigurations extends WebSecurityConfigurerAdapter imple
         return super.authenticationManagerBean();
     }
 
+    @Autowired
+    AuthenticationManager authenticationManager;
+
     PasswordEncoder passwordEncoder= PasswordEncoderFactories.createDelegatingPasswordEncoder();
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-
+        security.checkTokenAccess("permitAll()");
     }
 
     @Override
@@ -33,6 +37,6 @@ public class AuthServerConfigurations extends WebSecurityConfigurerAdapter imple
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoint) throws Exception {
-
+        endpoint.authenticationManager(authenticationManager);
     }
 }
