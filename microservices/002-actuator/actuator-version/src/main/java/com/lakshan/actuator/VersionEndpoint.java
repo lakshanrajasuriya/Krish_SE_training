@@ -1,4 +1,4 @@
-package com.lakshan.actuatordemo;
+package com.lakshan.actuator;
 
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
